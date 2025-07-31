@@ -6,31 +6,28 @@
     <title>Formulário</title>
 </head>
 <body>
-    <H1>Exemplo de Formulário</H1>
-    <form action="cadastro.php" method="get" autocomplete="on">
-        <fieldset>
-            <legend>Sexo</legend>
-            <input type="radio" name="sexo" id="isxmax" checked> <label for="isxmax">Masculino</label> <br>
-            <input type="radio" name="sexo" id="isxfem"> <label for="isxfem">Feminino</label>
-        </fieldset>
-
-        <fieldset>
-            <legend>Esportes Favoritos</legend>
-            <input type="checkbox" name="esfut" id="iesfut"><label for="iesfut">Futebol</label> <br>
-            <input type="checkbox" name="esbas" id="iesbas"><label for="iesbas">Basquete</label> <br>
-            <input type="checkbox" name="esnat" id="iesnat"><label for="iesnat">Natação</label> <br>
-            <input type="checkbox" name="esten" id="iesten"><label for="iesten">Tênis</label> <br>
-        </fieldset>
-
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <Label for="in1">Número 1: </Label>
+            <input type="number" name="n1" id="in1" min="0" max="50" required
+            oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <Label for="in2">Número 2: </Label>
+            <input type="number" name="n2" id="in2" min="0" max="50" required
+            oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
 
         <p>
+            <label for="isoma">Soma: </label>
+            <output name="SOMA" id="isoma">0</output>
+        </p>
+
+         <p>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
         </p>
-
-    </form>
-
-
-
+    </form>       
 </body>
 </html>
